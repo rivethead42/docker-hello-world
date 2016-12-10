@@ -17,6 +17,6 @@ namespace :hiera do
     puts JSON.pretty_generate(hiera_common)
 
     puts "write out common.json"
-    File.open('Puppet/hiera/common.json', 'w') { |file| file.write(JSON.pretty_generate(hiera_common)) }
+    File.open('puppet/hiera/common.json', 'w') { |file| file.write(JSON.pretty_generate(hiera_common)) }
   end
 end
