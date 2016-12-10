@@ -24,6 +24,6 @@ WORKDIR /var/node/helloworld
 RUN npm install
 RUN chown -R nodejs:nodejs /var/node/helloworld
 
-ENV NODE_ENV production
+ENV NODE_ENV ${NODE_ENV}
 
 CMD ["/var/node/helloworld/bin/www"]
