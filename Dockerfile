@@ -1,4 +1,4 @@
-FROM docker.cmg.int/cmg/node-base
+FROM registry.binaryvoid.com/binaryvoid/ubuntu-base
 
 EXPOSE 3000
 
