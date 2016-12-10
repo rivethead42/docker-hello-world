@@ -15,7 +15,6 @@ RUN mkdir -p /etc/puppet/hieradata
 
 RUN gem install r10k
 
-
 # Configure manifests and modules
 COPY puppet/site.pp /etc/puppet/manifests/
 
@@ -38,6 +37,6 @@ WORKDIR /var/node/helloworld
 RUN npm install
 RUN chown -R nodejs:nodejs /var/node/helloworld
 
-ENV NODE_ENV ${NODE_ENV}
+ENV NODE_ENV production
 
 CMD ["/var/node/helloworld/bin/www"]
