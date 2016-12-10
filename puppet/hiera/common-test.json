@@ -1,0 +1,6 @@
+{
+  "classes": [
+    "profiles::docker::rvm"
+  ],
+  "profiles::docker::rvm::rvm_version": "ruby-1.9.3-p448"
+}
