@@ -59,6 +59,6 @@ mod 'rvm',
 ###################
 # private modules #
 ###################
-mod "profiles"
+mod "profiles",
   :git => "https://github.com/tthomsen/puppet-profiles.git",
   :ref => "master"
