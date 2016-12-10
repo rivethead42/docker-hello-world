@@ -11,7 +11,9 @@ namespace :hiera do
       "profiles::docker::nodejs::service_name" => "helloworld",
       "profiles::docker::nodejs::deploy_dir" => "/var/node/helloworld",
       "profiles::docker::nodejs::service_run_command" => "/var/node/helloworld/bin/www",
-      "profiles::docker::nodejs::node_version" => "6.x"
+      "profiles::docker::nodejs::node_group" => "nodejs",
+      "profiles::docker::nodejs::node_user" => "nodejs"
+
     }
 
     puts JSON.pretty_generate(hiera_common)
