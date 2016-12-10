@@ -6,11 +6,11 @@ RUN puppet apply --modulepath=/etc/puppet/modules/ --hiera_config /etc/puppet/hi
 
 WORKDIR /var/node/membercenter
 
-# Copy Gemfile
-ADD Gemfile Gemfile
-ADD Rakefile Rakefile
-ADD spec spec
-ADD .rspec .rspec
+# Copy Gemfile and spec
+COPY Gemfile Gemfile
+COPY Rakefile Rakefile
+COPY spec spec
+COPY .rspec .rspec
 
 # Install bundler and required Gems
 RUN gem install bundler
