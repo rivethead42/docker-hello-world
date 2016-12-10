@@ -1,6 +1,20 @@
-FROM registry.binaryvoid.com/binaryvoid/ubuntu-base
+FROM node:boron
 
 EXPOSE 3000
+
+RUN  apt-get -yq update
+RUN apt-get install -qqy wget git ssh vim
+
+RUN wget https://apt.puppetlabs.com/puppetlabs-release-pc1-precise.deb
+RUN dpkg -i puppetlabs-release-pc1-precise.deb
+RUN apt-get -qqy update
+
+RUN apt-get install -qqy puppet
+
+RUN mkdir -p /etc/puppet/hieradata
+
+RUN gem install r10k
+
 
 # Configure manifests and modules
 COPY puppet/site.pp /etc/puppet/manifests/
