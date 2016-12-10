@@ -13,9 +13,9 @@ namespace :hiera do
       "profiles::docker::nodejs::service_run_command" => "/var/node/helloworld/bin/www",
     }
 
-    puts JSON.pretty_generate(settings)
+    puts JSON.pretty_generate(hiera_common)
 
     puts "write out common.json"
-    File.open('Puppet/hiera/common.json', 'w') { |file| file.write(JSON.pretty_generate(settings)) }
+    File.open('Puppet/hiera/common.json', 'w') { |file| file.write(JSON.pretty_generate(hiera_common)) }
   end
 end
