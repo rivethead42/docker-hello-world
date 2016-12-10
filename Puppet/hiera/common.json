@@ -1,0 +1,11 @@
+{
+  "classes": [
+    "profiles::docker::nodejs"
+  ],
+  "profiles::docker::nodejs::git_repo": "",
+  "profiles::docker::nodejs::git_revision": "v2.6.0",
+  "profiles::docker::nodejs::environment": "production",
+  "profiles::docker::nodejs::service_name": "helloworld",
+  "profiles::docker::nodejs::deploy_dir": "/var/node/helloworld",
+  "profiles::docker::nodejs::service_run_command": "/var/node/helloworld/bin/www",
+}
