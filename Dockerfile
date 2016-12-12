@@ -2,6 +2,8 @@ FROM node:boron
 
 EXPOSE 3000
 
+ARG NODE_ENV
+
 RUN  apt-get -yq update
 RUN apt-get install -qqy wget git ssh vim
 
@@ -37,6 +39,6 @@ WORKDIR /var/node/helloworld
 RUN npm install
 RUN chown -R nodejs:nodejs /var/node/helloworld
 
-ENV NODE_ENV production
+ENV NODE_ENV ${NODE_ENV}
 
 CMD ["/var/node/helloworld/bin/www"]

@@ -1,5 +1,5 @@
 
-ADD puppet/hiera/common-test.json /etc/puppet/hieradata/common.json
+COPY puppet/hiera/common-test.json /etc/puppet/hieradata/common.json
 
 # Run Puppet apply
 RUN puppet apply --modulepath=/etc/puppet/modules/ --hiera_config /etc/puppet/hiera.yaml
