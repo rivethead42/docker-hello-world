@@ -2,7 +2,7 @@ FROM node:boron
 
 EXPOSE 3000
 
-ARG NODE_ENV
+ARG NODE_ENV=production
 
 RUN  apt-get -yq update
 RUN apt-get install -qqy wget git ssh vim
