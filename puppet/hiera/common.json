@@ -1,6 +1,6 @@
 {
   "classes": [
-    "profiles::docker::nodejs"
+    "roles::docker::nodejs"
   ],
   "profiles::docker::nodejs::deploy_dir": "/var/nodejs",
   "profiles::docker::nodejs::git_repo": "https://github.com/tthomsen/ci-demo.git",

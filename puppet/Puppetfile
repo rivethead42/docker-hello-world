@@ -62,3 +62,7 @@ mod 'rvm',
 mod "profiles",
   :git => "https://github.com/tthomsen/puppet-profiles.git",
   :ref => "master"
+
+mod "roles",
+  :git => "https://github.com/tthomsen/puppet-roles.git",
+  :ref => "master"
