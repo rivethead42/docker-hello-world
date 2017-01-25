@@ -36,9 +36,9 @@ RUN puppet apply --modulepath=/etc/puppet/modules/ --hiera_config /etc/puppet/hi
 
 WORKDIR /var/node/helloworld
 
-RUN npm install
-RUN chown -R nodejs:nodejs /var/node/helloworld
+#RUN npm install
+#RUN chown -R nodejs:nodejs /var/node/helloworld
 
-ENV NODE_ENV production
+#ENV NODE_ENV production
 
 #CMD ["/var/node/helloworld/bin/www"]
