@@ -32,13 +32,13 @@ COPY puppet/hiera/common.json /etc/puppet/hieradata/
 RUN PUPPETFILE=/etc/puppet/Puppetfile PUPPETFILE_DIR=/etc/puppet/modules/ r10k puppetfile install --verbose debug2 --color
 
 # Run Puppet apply
-#RUN puppet apply --modulepath=/etc/puppet/modules/ --hiera_config /etc/puppet/hiera.yaml --verbose
+RUN puppet apply --modulepath=/etc/puppet/modules/ --hiera_config /etc/puppet/hiera.yaml --verbose
 
 WORKDIR /var/node/helloworld
 
-#RUN npm install
-#RUN chown -R nodejs:nodejs /var/node/helloworld
+RUN npm install
+RUN chown -R nodejs:nodejs /var/node/helloworld
 
-#ENV NODE_ENV production
+ENV NODE_ENV ${NODE_ENV}
 
-#CMD ["/var/node/helloworld/bin/www"]
+CMD ["/var/node/helloworld/bin/www"]
