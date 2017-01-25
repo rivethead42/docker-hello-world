@@ -2,7 +2,7 @@
   "classes": [
     "roles::docker::nodejs"
   ],
-  "profiles::docker::nodejs::deploy_dir": "/var/node",
+  "profiles::docker::nodejs::deploy_dir": "/var/node/helloworld",
   "profiles::docker::nodejs::git_repo": "https://github.com/tthomsen/ci-demo.git",
   "profiles::docker::nodejs::git_revision": "master",
   "profiles::docker::nodejs::service_run_command": "/var/node/helloworld/bin/www",
