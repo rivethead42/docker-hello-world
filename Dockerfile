@@ -41,4 +41,4 @@ RUN chown -R nodejs:nodejs /var/node/helloworld
 
 ENV NODE_ENV ${NODE_ENV}
 
-CMD ["/var/node/helloworld/bin/www"]
+CMD ["/var/node/helloworld/bin/www &"]
