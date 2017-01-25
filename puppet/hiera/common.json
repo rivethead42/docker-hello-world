@@ -1,0 +1,13 @@
+{
+  "classes": [
+    "profiles::docker::nodejs"
+  ],
+  "profiles::docker::nodejs::deploy_dir": "/var/nodejs",
+  "profiles::docker::nodejs::git_repo": "https://github.com/tthomsen/ci-demo.git",
+  "profiles::docker::nodejs::git_revision": "master",
+  "profiles::docker::nodejs::service_run_command": "/var/node/helloworld/bin/www",
+  "profiles::docker::nodejs::service_name": "helloworld",
+  "profiles::docker::nodejs::node_version": "6.9.4",
+  "profiles::docker::nodejs::node_group": "nodejs",
+  "profiles::docker::nodejs::node_user": "nodejs",
+}
